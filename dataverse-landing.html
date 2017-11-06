@@ -1,17 +1,317 @@
+<?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>This is a landing page comp for LibraData's Dataverse page</title>
-    <link type="text/css" rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css" />
-  </head>
-  <body>
-    <div class="container" id="content">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
+<head>
+    <title>University of Virginia Dataverse Dataverse</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="The Dataverse Project is an open source software application to share, cite and archive data. Dataverse provides a robust infrastructure for data stewards to host and archive data, while offering researchers an easy way to share and get credit for their data." />
+<!-- CMW -->
+    <link type="text/css" rel="stylesheet" href="../../bootstrap/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="../../bootstrap/css/bootstrap-theme.min.css" />
+<!-- CMW END -->     
+</head>
+
+<body>
+    <a href="#content" class="sr-only">Skip to main content</a>
+    <style>
+        .owl-carousel .owl-wrapper:after {
+            content: ".";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            line-height: 0;
+            height: 0;
+        }
+        .owl-carousel {
+            display: none;
+            position: relative;
+            width: 100%;
+            -ms-touch-action: pan-y;
+        }
+        .owl-carousel .owl-wrapper {
+            display: none;
+            position: relative;
+            -webkit-transform: translate3d(0px, 0px, 0px);
+        }
+        .owl-carousel .owl-wrapper-outer {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .owl-carousel .owl-wrapper-outer.autoHeight {
+            -webkit-transition: height 500ms ease-in-out;
+            -moz-transition: height 500ms ease-in-out;
+            -ms-transition: height 500ms ease-in-out;
+            -o-transition: height 500ms ease-in-out;
+            transition: height 500ms ease-in-out;
+        }
+
+        .owl-carousel .owl-item {
+            float: left;
+        }
+
+        .owl-controls .owl-page,
+        .owl-controls .owl-buttons div {
+            cursor: pointer;
+        }
+
+        .owl-controls {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        .grabbing {
+            cursor: url(grabbing.png) 8 8, move;
+        }
+
+        .owl-carousel .owl-wrapper,
+        .owl-carousel .owl-item {
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            -ms-backface-visibility: hidden;
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0);
+        }
+
+        #carouselBlocksWrapper {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 1em;
+        }
+
+        #featuredDataversesBlock {
+            overflow: hidden;
+            padding-top: .5em;
+            border-top: 1px solid #ddd;
+        }
+
+        #featuredDataversesBlock div.customNavigation {
+            width: 4%;
+            float: left;
+            padding: 28px 0;
+        }
+
+        #featuredDataversesBlock div.customNavigation span.glyphicon {
+            color: #999999;
+            font-size: 2em;
+        }
+
+        #featuredDataversesList {
+            width: 90%;
+            float: left;
+        }
+
+        #featuredDataversesList .item {
+            min-height: 80px;
+        }
+
+        #featuredDataversesList .item a {
+            display: block;
+        }
+
+        #featuredDataversesList .item .icon-dataverse {
+            font-size: 50px;
+            line-height: normal;
+            color: #c55b28;
+        }
+
+        #featuredDataversesList .item img {
+            max-width: 160px;
+            max-height: 60px;
+        }
+
+        .owl-carousel {
+            margin-bottom: .5em;
+        }
+
+        .owl-carousel .item {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #e3e3e3;
+            border-radius: 4px;
+            margin: 10px;
+        }
+
+        .logoPreview {
+            max-width: 80px;
+            max-height: 80px;
+        }
+
+        #metadataFieldOptionsPanel-Block {
+            width: 70%;
+            margin-left: 60px;
+            margin-top: .5em;
+        }
+
+        #metadataFieldOptionsPanel-Body {
+            padding: 0;
+            max-height: 400px;
+            overflow-y: scroll;
+        }
+
+        #metadataFieldOptions td {
+            vertical-align: middle;
+        }
+
+        #metadataFieldOptions div.checkbox.child-field {
+            padding-left: 18px;
+        }
+
+        .navbar-fixed-top {
+            top: 50px !important;
+        }
+
+        #dataverse-header-block {
+            padding-top: 150px;
+        }
+
+        #custom-header {
+            background: #03316A;
+            min-height: 44px;
+            position: fixed;
+            right: 0;
+            left: 0;
+            z-index: 930;
+            padding-top: 8px;
+        }
+
+        #custom-header a.cst-hdr-link {
+            line-height: 32px;
+            color: #F59A2C;
+            font-weight: bold;
+        }
+        .dropdown.dropdown-lg .dropdown-menu {
+            margin-top: -1px;
+            padding: 6px 20px;
+        }
+        .input-group-btn .btn-group {
+            display: flex !important;
+        }
+        .btn-group .btn {
+            border-radius: 0;
+            margin-left: -1px;
+        }
+        .btn-group .btn:last-child {
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+        .btn-group .form-horizontal .btn[type="submit"] {
+          border-top-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+        }
+        .form-horizontal .form-group {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .form-group .form-control:last-child {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        @media screen and (min-width: 768px) {
+            #adv-search {
+                width: 500px;
+                margin: 0 auto;
+            }
+            .dropdown.dropdown-lg {
+                position: static !important;
+            }
+            .dropdown.dropdown-lg .dropdown-menu {
+                min-width: 500px;
+            }
+        }
+        
+        /* CMW BEGIN */
+        
+        /* CMW END */
+
+    </style>
+    <div id="custom-header">
+        <div class="container">
+            <p class="text-right">
+                <a class="pull-left" href="http://library.virginia.edu/" title="UVa Library" target="_blank"><img src="/logos/navbar/uva-horizontal-logo.png" alt="UVa Library"/></a>
+                <a class="cst-hdr-link" href="http://libra.virginia.edu" title="Discover Libra Repository" target="_blank">Discover Libra Repository</a>
+            </p>
+        </div>
+    </div>
+    <div id="dataverse-header-block">
+        <!-- Navbar Panel -->
+        <nav id="navbarFixed" class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/"><img src="/logos/navbar/DV-LibraData.png" />
+                        </a>
+                    <span class="label label-default status">For Testing Only...</span>
+                </div>
+                <div class="collapse navbar-collapse" id="topNavBar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a id="navbar-search-toggle" title="Search all dataverses...">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </a>
+                        </li>
+                        <form class="navbar-form navbar-left" role="search" style="display:none;">
+                            <div class="form-group">
+                                <label class="sr-only" for="navbarsearch">Search</label>
+                                <input id="navbarsearch" type="text" class="search-input ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" size="28" value="" placeholder="Search all dataverses..." />
+                            </div>
+                            <button type="submit" class="btn btn-default" onclick="window.location = '/dataverse/uva?q=' + document.getElementById('navbarsearch').value;                                     return false;">
+                                <span class="glyphicon glyphicon-search"></span> Find
+                            </button>
+                        </form>
+                        <li><a href="http://www.library.virginia.edu/libra/datasets/" target="_blank">
+                                About
+                            </a>
+                        </li>
+
+                        <li><a href="http://uvalib.github.io/dataverse-docs/en/current/user" target="_blank">
+                                User Guide
+                            </a>
+                        </li>
+                        <form id="j_idt42" name="j_idt42" method="post" action="/dataverse_homepage.xhtml" class="navbar-form navbar-left navbar-form-link">
+                            <input type="hidden" name="j_idt42" value="j_idt42" />
+                            <a id="j_idt42:j_idt43" href="#" class="ui-commandlink ui-widget" onclick="PrimeFaces.ab({s:&quot;j_idt42:j_idt43&quot;,u:&quot;contactDialog&quot;,onco:function(xhr,status,args){PF('contactForm').show();}});return false;">Support</a><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="-3332564171209794974:2882892650326017689" autocomplete="off" />
+                        </form>
+                        <li>
+                        </li>
+                        <li><a href="/loginpage.xhtml?redirectPage=%2Fdataverse_homepage.xhtml">
+                                    Log In
+                                </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header Panel -->
+        <!-- Message Panel -->
+        <div id="messagePanel">
+            <div class="container messagePanel">
+            </div>
+        </div>
+    </div>
+    <div class="container" id="content">
+    
+        
+            
+                
+        <!-- CMW BEGIN -->
         <div class="row">
            <div class="col-md-6 well">
                 <h2 style="color: #EB5F0C; margin-top: 0px;">Add your dataset to LibraData</h2>
-                <h2 style="color: #E57200; margin-top: 0px;">Add your dataset to LibraData2</h2>
                 <p>LibraData is a place for UVA researchers to share data publicly, and is part of the Libra Scholarly Repository suite of services which includes works of UVA scholarship such as articles, books, theses, and data.</p>
                 <p><b>Step One:</b> Start with the <a href="http://www.library.virginia.edu/libra/datasets/libra-data-deposit-checklist/" target="_blank">LibraData Checklist</a></p>
                 <div class="form-group">
@@ -63,44 +363,44 @@
                         </div>
                    </li>
                </ul>
-           </div>
+           </div> 
         </div>
         <div class="row">
             <div class="col-md-12" style="margin: 15px 0; padding: 30px; border-top: 1px solid #DADADA; border-bottom: 1px solid #DADADA;">
                 <div class="input-group" id="adv-search">
-                    <input type="text" class="form-control col-sm-6" placeholder="Search Datasets" />
-                    <div class="input-group-btn">
+                    <input type="text" id="searchDatasets" class="form-control col-sm-6" placeholder="Search for Datasets" />
+                        <div class="input-group-btn">
                         <div class="btn-group" role="group">
                             <div class="dropdown dropdown-lg">
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
                                 <div class="dropdown-menu dropdown-menu-right" role="menu">
                                     <form class="form-horizontal" role="form">
-                                      <div class="form-group">
-                                        <label for="filter">Filter by:</label>
-                                        <select class="form-control">
-                                            <option value="0" selected>Search All</option>
-                                            <option value="1">University of Virginia Law School</option>
-                                            <option value="2">Department of Astronomy</option>
-                                            <option value="3">Department of Biology</option>
-                                            <option value="4">Center for Politics</option>
-                                            <option value="5">Cultural Heritage</option>
-                                            <option value="6">Curry School of Education</option>
-                                            <option value="7">Department of Economics</option>
-                                            <option value="8">Department of Environmental Sciences</option>
-                                            <option value="9">McIntire School of Commerce</option>
-                                            <option value="10">Department of Politics</option>
-                                            <option value="11">School of Engineering &amp; Applied Science</option>
-                                        </select>
-                                      </div>
-                                      <div class="form-group">
-                                        <label for="contain">Author</label>
-                                        <input class="form-control" type="text" />
-                                      </div>
-                                      <div class="form-group">
-                                        <label for="contain">Contains the words</label>
-                                        <input class="form-control" type="text" />
-                                      </div>
-                                      <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</button>
+                                        <div class="form-group">
+                                            <label for="filter">Filter by:</label>
+                                            <select class="form-control">
+                                                <option value="0" selected>Search All</option>
+                                                <option value="1">University of Virginia Law School</option>
+                                                <option value="2">Department of Astronomy</option>
+                                                <option value="3">Department of Biology</option>
+                                                <option value="4">Center for Politics</option>
+                                                <option value="5">Cultural Heritage</option>
+                                                <option value="6">Curry School of Education</option>
+                                                <option value="7">Department of Economics</option>
+                                                <option value="8">Department of Environmental Sciences</option>
+                                                <option value="9">McIntire School of Commerce</option>
+                                                <option value="10">Department of Politics</option>
+                                                <option value="11">School of Engineering &amp; Applied Science</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="contain">Author</label>
+                                            <input class="form-control" type="text" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="contain">Contains the words</label>
+                                            <input class="form-control" type="text" />
+                                        </div>
+                                        <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</button>
                                     </form>
                                 </div>
                             </div>
@@ -108,12 +408,12 @@
                         </div>
                     </div>
                 </div>
-          </div>
+            </div>
         </div>
         <div class="row">
             <h3>Featured Dataverses</h3>
         </div>
-       <div class="row" style="margin-bottom: 15px;">
+        <div class="row" style="margin-bottom: 15px;">
             <div class="col-md-6">
                 <a href="/dataverse/uva" class="btn btn-primary pull-right" role="button">Browse ALL Dataverses</a>
             </div>
@@ -121,8 +421,7 @@
                 <a href="/dataverse/uva?q=&types=datasets&sort=dateSort&order=desc&page=1" class="btn btn-primary" role="button">Browse Datasets</a>
             </div>
         </div>
-
-       <div class="row">
+        <div class="row">
             <div class="col-md-6">
                 <a href="/dataverse/uva-law" class="btn btn-block btn-lg btn-default" role="button">University of Virginia Law School</a>
                 <a href="/dataverse/astronomy" class="btn btn-block btn-lg btn-default" role="button">Department of Astronomy</a>
@@ -139,7 +438,100 @@
                 <a href="/dataverse/seas" class="btn btn-block btn-lg btn-default" role="button">School of Engineering &amp; Applied Science</a>
             </div>
         </div>
+        <!-- CMW END -->
 
+    
+        
     </div>
-  </body>
+    <!-- FOOTER BLOCK -->
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 small">
+                    <p>Copyright &#169; 2017, by the Rector and Visitors of the University of Virginia | <a href="http://www.virginia.edu/siteinfo/privacy" target="_blank">Privacy Policy</a>
+                    </p>
+                </div>
+                <div class="col-sm-4 text-right">
+                    <div class="poweredbylogo">
+                        <span>Powered by</span>
+                        <a href="http://dataverse.org/" title="The Dataverse Project" target="_blank"><img src="/resources/images/dataverseproject_logo.png" alt="The Dataverse Project" /></a><span class="version">v. 4.7.1 build 94-62f8987</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        #content.container {
+            min-height: calc(100% - 210px);
+            margin-bottom: -142px;
+        }
+
+        #content.container:after {
+            content: "";
+            display: block;
+        }
+
+        #footer {
+            color: #a9a9a9;
+            margin-top: 0px;
+            padding-bottom: 0px;
+            bottom: -130px;
+            position: relative;
+        }
+        #custom-footer,
+        #content.container:after {
+            height: 142px;
+        }
+
+        #custom-footer {
+            background: #03316A;
+            color: #a9a9a9;
+            min-height: 100px;
+            padding: 1.25em 0 100px 0;
+        }
+
+        #custom-footer a {
+            color: #fff
+        }
+
+    </style>
+    <div id="custom-footer">
+        <div class="container">
+            <p>SAMPLE FOOTER TEXT</p>
+            <p class="small">
+                <a href="https://dataverse.org" title="SAMPLE LINK" target="_blank">SAMPLE LINK</a>
+            </p>
+        </div>
+    </div>
+    <script type="text/javascript" defer="defer" src="../../bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+    <!-- Piwik -->
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u = "//analytics.lib.virginia.edu/";
+            _paq.push(['setTrackerUrl', u + 'piwik.php']);
+            _paq.push(['setSiteId', 27]);
+            var d = document,
+                g = d.createElement('script'),
+                s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript';
+            g.async = true;
+            g.defer = true;
+            g.src = u + 'piwik.js';
+            s.parentNode.insertBefore(g, s);
+        })();
+
+    </script>
+    <noscript><p><img src="//analytics.lib.virginia.edu/piwik.php?idsite=27" style="border:0;" alt="" /></p></noscript>
+    <!-- End Piwik Code -->
+</body>
+
 </html>
