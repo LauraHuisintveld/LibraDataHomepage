@@ -55,18 +55,25 @@
                </ul>
            </div> 
         </div>
-     <div class="row dataverseSearch">
-            <div class="col-md-12 searchContainer">
-                <div class="input-group" id="adv-search">
-                    <input type="text" id="searchDatasets" class="form-control col-sm-6" placeholder="Search for Datasets" />
-                    <div class="input-group-btn">
-                        <div class="btn-group" role="group">
-                            <button type=“submit” class="btn btn-primary" onclick="window.location = '/dataverse/uva?q=' + document.getElementById('navbarsearch').value;                                     return false;">
-                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+     <!--<div class="row dataverseSearch"> -->
+    <!-- Search Form-->
+<div class="row panelSearchForm">
+        <div class="col-sm-8">
+<form id="j_idt390" name="j_idt390" method="post" action="/dataverse/uva?q=" enctype="application/x-www-form-urlencoded">
+
+<input type="hidden" name="j_idt390" value="j_idt390" />
+
+<input id="j_idt390:searchBasic" name="j_idt390:searchBasic" type="text" size="40" onkeypress="if (event.keyCode == 13) { submitsearch(); return false; }" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all search-input" />
+
+<script id="j_idt390:searchBasic_s" type="text/javascript">PrimeFaces.cw("InputText","widget_j_idt390_searchBasic",{id:"j_idt390:searchBasic"});</script><script id="j_idt390:j_idt391_s" type="text/javascript">$(function(){PrimeFaces.cw("Watermark","widget_j_idt390_j_idt391",{id:"j_idt390:j_idt391",value:"Search this dataverse...",target:"j_idt390:searchBasic"},"watermark");});</script>
+
+<a id="j_idt390:searchbutton" href="#" class="ui-commandlink ui-widget btn btn-default" onclick="PrimeFaces.ab({s:&quot;j_idt390:searchbutton&quot;});return false;">
+<span class="glyphicon glyphicon-search"></span> Find</a>
+
+<script type="text/javascript">submitsearch = function() {PrimeFaces.ab({s:"j_idt390:j_idt393",f:"j_idt390",pa:arguments[0]});}</script>
+
+
+</form>
         </div>
        <div class="row rowMargin">
                 <div class="col-md-6">
