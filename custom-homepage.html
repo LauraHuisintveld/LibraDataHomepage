@@ -88,3 +88,24 @@ cles, books, theses, and data.</p>
                 </div>
             </div>
         </div>
+<script> $(document).ready(function() {
+	// Detect if enter key pressed in search box to trigger submission.
+	$(".dataverseSearch input[type=text]").on("keyup", function(e) {
+		if (e.keyCode == 13) {
+			$(".dataverseSearch button").trigger("click");
+		}
+	});
+	// For accessibility make sure the button responds to enter and spacebar
+	$(".dataverseSearch button").on("keyup", function(e) {
+		if ((e.keyCode == 13) || (e.keyCode ==32)) {
+			$(".dataverseSearch button").trigger("click");
+		}
+	});
+	// Configure search button to trigger submission with input box text value.
+	$(".dataverseSearch button").click(function() {
+		console.log("search submission");
+		var searchStr = $(".dataverseSearch input[type=text]").val();
+		window.location = '/dataverse/libradata?q='+searchStr;
+	});
+});
+</script>
