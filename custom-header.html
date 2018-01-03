@@ -1,0 +1,35 @@
+    <style>
+        /* NOTE: You can use the custom CSS configuration to move this CSS your own stylesheet... */
+
+        /* Overwrite default navbar styles to make room at the top of the browser page for our custom header... */
+        .navbar-fixed-top {
+            top:50px !important;
+        }
+        #dataverse-header-block {
+            padding-top: 150px;
+        }
+
+		/* Place narrow custom header at the top of the page... */
+        #custom-header {
+            background: #03316A;
+            min-height: 44px;
+            position: fixed;
+            right: 0;
+            left: 0;
+            z-index: 930;
+            padding-top: 8px;
+        }
+        #custom-header a.cst-hdr-link {
+            line-height: 32px;
+            color: #F59A2C;
+            font-weight: bold;
+        }
+    </style>
+    <div id="custom-header">
+        <div class="container">
+            <p class="text-right">
+                <a class="pull-left" href="http://library.virginia.edu/" title="UVa Library" target="_blank"><img src="/logos/navbar/uva-horizontal-logo.png" alt="UVa Library"/></a>
+                <a class="cst-hdr-link" href="http://libra.virginia.edu" title="Discover Libra Repository" target="_blank">Discover Libra Repository</a>
+            </p>
+        </div>
+    </div>
