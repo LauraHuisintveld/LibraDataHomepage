@@ -85,7 +85,8 @@ cles, books, theses, and data.</p>
                 </div>
             </div>
         </div>
-<script> $(document).ready(function() {
+<script> 
+	$(document).ready(function() {
 	// Detect if enter key pressed in search box to trigger submission.
 	$(".dataverseSearch input[type=text]").on("keyup", function(e) {
 		if (e.keyCode == 13) {
@@ -100,9 +101,20 @@ cles, books, theses, and data.</p>
 	});
 	// Configure search button to trigger submission with input box text value.
 	$(".dataverseSearch button").click(function() {
-		console.log("search submission");
 		var searchStr = $(".dataverseSearch input[type=text]").val();
 		window.location = '/dataverse/libradata?q='+searchStr;
+	});
+	// For accessibility make sure the Next button responds to enter and spacebar
+	$(".customWell button").on("keyup", function(e) {
+		if ((e.keyCode == 13) || (e.keyCode ==32)) {
+			$(".customWell button").trigger("click");
+		}
+	});
+	// Retrieve the selected data ID and pass as parameter.
+	// NOTE: There appears to be an existing onclick event handler for the Next button that generates an error.
+	$(".customWell button").click(function() {
+		var dataverseSelected = $(".customWell select option:selected").val();
+		window.location = '/dataset.xhtml?ownerId='+dataverseSelected;
 	});
 });
 </script>
