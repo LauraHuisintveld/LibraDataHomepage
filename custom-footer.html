@@ -1,25 +1,28 @@
-<!-- Place in the HEAD of your HTML. -->
+ <style>
+        /* NOTE: You can use the custom CSS configuration to move this CSS your own stylesheet. */
+        /* Overwrite default footer styles to make room at the bottom of the browser page for our custom footer... */
+        #content.container {
+                min-height: calc(100% - 210px);
+            margin-bottom: -142px; 
+        }
+        #content.container:after {
+                content: "";
+                display: block;
+        }
+        #footer {
+                        color: #a9a9a9; margin-top:0px; padding-bottom:0px; bottom:-530px; position: relative;
+                }
+        
+                /* Place custom footer just above default footer at the bottom of the page... */
+        #custom-footer, #content.container:after {
+            height: 142px; 
+        }
+    </style>
+    <div id="custom-footer">
+        <div class="container">
+        <uvalib-footer>
 <script src="//static.lib.virginia.edu/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 <link rel="import" href="//static.lib.virginia.edu/bower_components/uvalib-footer/uvalib-footer.html">
-
-<!-- Replace content of DV-Footer.html with this. -->
-<style>
-	#content.container {
-		min-height: calc(100% - 210px);
-			margin-bottom: -142px; 
-	}
-	#content.container:after {
-		content: "";
-		display: block;
-	}
-	#custom-footer, #content.container:after {
-			height: 142px; 
-	}
-</style>
-<div id="custom-footer">
-	<div class="container">
-		<uvalib-footer>
-			<div slot="bottom-bar"></div>
-		</uvalib-footer>
-	</div>
-</div>
+      </uvalib-footer>
+        </div>
+    </div>
