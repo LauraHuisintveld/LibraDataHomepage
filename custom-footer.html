@@ -1,7 +1,9 @@
 <!-- Place in the HEAD of your HTML. -->
 <script src="//static.lib.virginia.edu/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 <script>
- $("#footer").attr("slot", "bottom-bar").appendTo("#uvalib-footer");
+$(document).ready(function(){
+  $("#footer").attr("slot", "bottom-bar").appendTo("#uvalib-footer");
+}
 </script>
 <link rel="import" href="//static.lib.virginia.edu/bower_components/uvalib-footer/uvalib-footer.html">
 
