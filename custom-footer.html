@@ -1,21 +1,21 @@
-<!-- Place in the HEAD of your HTML. -->
+<!-- Load web component along with Polymer shim in case browser support not there yet. -->
 <script src="//static.lib.virginia.edu/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-<script>
-$(document).ready(function(){
-  $("#footer").attr("slot", "bottom-bar").appendTo("#uvalib-footer");
-}
-</script>
 <link rel="import" href="//static.lib.virginia.edu/bower_components/uvalib-footer/uvalib-footer.html">
 
-<!-- Replace content of DV-Footer.html with this. -->
+<!-- Adjust footer placement inside of component after page load. -->
+<script>
+$(document).ready(function(){
+  $("#bottom-bar").remove();
+  $("#footer").attr("id", "bottom-bar").addClass("lib3 uvalib-footer").appendTo("#uvalib-footer");
+});
+</script>
+
+<!-- Footer with additional styling. -->
 <style>
 	#content.container {
 		min-height: calc(100% - 210px);
 			margin-bottom: -142px; 
 	}
-/*	#footer {
-		color: #a9a9a9; margin-top:0px; padding-bottom:0px; bottom:-530px; position: relative;
-	}*/
 	#content.container:after {
 		content: "";
 		display: block;
