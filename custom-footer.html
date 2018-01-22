@@ -6,22 +6,28 @@
 <script>
 $(document).ready(function(){
   $("#bottom-bar").remove();
-  $("#footer").attr("id", "bottom-bar").addClass("lib3 uvalib-footer").appendTo("#uvalib-footer");
+  $("#footer").attr("id", "bottom-bar").addClass("lib3 bottom-bar uvalib-footer").appendTo("#uvalib-footer");
 });
 </script>
 
 <!-- Footer with additional styling. -->
 <style>
-	#content.container {
+	#custom-footer {
+		padding-top: 30px;
+	}
+	#content.footer-custom {
 		min-height: calc(100% - 210px);
 			margin-bottom: -142px; 
 	}
-	#content.container:after {
+	#content.footer-custom:after {
 		content: "";
 		display: block;
 	}
-	#custom-footer, #content.container:after {
+	#custom-footer, #content.footer-custom:after {
 			height: 142px; 
+	}
+	#bottom-bar {
+		padding: 15px 0;	
 	}
 </style>
 <div id="custom-footer">
