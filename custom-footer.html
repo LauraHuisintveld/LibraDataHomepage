@@ -1,40 +1,13 @@
 <!-- Load web component along with Polymer shim in case browser support not there yet. -->
-<script src="//static.lib.virginia.edu/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-<link rel="import" href="//static.lib.virginia.edu/bower_components/uvalib-footer/uvalib-footer.html">
+<script src="//wwwstatic.lib.virginia.edu/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="import" href="//wwwstatic.lib.virginia.edu/bower_components/uvalib-footer/uvalib-footer.html">
 
 <!-- Adjust footer placement inside of component after page load. -->
 <script>
 $(document).ready(function(){
-  $("#bottom-bar").remove();
-  $("#footer").attr("id", "bottom-bar").addClass("lib3 bottom-bar uvalib-footer").appendTo("#uvalib-footer");
+  $("#footer").attr("slot", "bottom-bar").wrap("<uvalib-footer></uvalib-footer>");
 });
 </script>
 
-<!-- Footer with additional styling. -->
-<style>
-	#custom-footer {
-		padding-top: 30px;
-	}
-	#content.footer-custom {
-		min-height: calc(100% - 210px);
-			margin-bottom: -142px; 
-	}
-	#content.footer-custom:after {
-		content: "";
-		display: block;
-	}
-	#custom-footer, #content.footer-custom:after {
-			height: 142px; 
-	}
-	#bottom-bar {
-		padding: 15px 0;	
-	}
-</style>
-<div id="custom-footer">
-	<div class="footer-custom">
-		<uvalib-footer id="uvalib-footer">
-		</uvalib-footer>
-	</div>
-</div>
 
 
