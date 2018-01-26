@@ -5,28 +5,21 @@
     <style>
         /* NOTE: You can use the custom CSS configuration to move this CSS your own stylesheet... */
 
-        /* Overwrite default navbar styles to make room at the top of the browser page for our custom header... */
-        .navbar-fixed-top {
-            top:70px !important;
-        }
-        #dataverse-header-block {
-            padding-top: 150px;
+        #custom-header {
+            position: relative;
+            z-index: 930;
         }
 
-		/* Place narrow custom header at the top of the page... */
-        #custom-header {
-            min-height: 44px;
-            position: fixed;
-            right: 0;
-            left: 0;
-            z-index: 930;
+        #dataverse-header-block {
+            position: relative;
+            padding-top: 0px;
+        }
+        
+        .navbar-fixied-top {
+        	position: relative;
         }
     </style>
     <div id="custom-header">
-        <div class="container">
-        <uvalib-simple-header></uvalib-simple-header>
-        </div>
+      <uvalib-simple-header></uvalib-simple-header>
     </div>
-
-
 
