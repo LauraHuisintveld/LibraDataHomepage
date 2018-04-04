@@ -6,17 +6,29 @@
         /* NOTE: You can use the custom CSS configuration to move this CSS your own stylesheet... */
 
         #custom-header {
-            position: relative;
+            position: fixed;
+            top: 0;
+            width: 100%;
             z-index: 930;
         }
 
         #dataverse-header-block {
-            position: relative;
+            position: fixed;
+            top: 74px;
+            width: 100%;
             padding-top: 0px;
+            z-index: 930;
         }
         
         .navbar-fixed-top {
         	position: relative;
+        	padding-top: 10px;
+        }
+        
+        #content {
+        	position: relative;
+        	top: 150px;
+        	min-height: 900px;
         }
     </style>
     <div id="custom-header">
