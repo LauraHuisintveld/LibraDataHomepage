@@ -1,37 +1,23 @@
+
 <!-- Load web component along with Polymer shim in case browser support not there yet. -->
 <script src="//wwwstatic.lib.virginia.edu/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 <link rel="import" href="//wwwstatic.lib.virginia.edu/bower_components/uvalib-header/uvalib-simple-header.html">
 
     <style>
         /* NOTE: You can use the custom CSS configuration to move this CSS your own stylesheet... */
-
         #custom-header {
-            position: fixed;
-            top: 0;
-            width: 100%;
+            position: relative;
             z-index: 930;
         }
-
         #dataverse-header-block {
-            position: fixed;
-            top: 74px;
-            width: 100%;
+            position: relative;
             padding-top: 0px;
-            z-index: 930;
         }
         
         .navbar-fixed-top {
         	position: relative;
-        	padding-top: 10px;
-        }
-        
-        #content {
-        	position: relative;
-        	top: 150px;
-        	min-height: 900px;
         }
     </style>
     <div id="custom-header">
       <uvalib-simple-header></uvalib-simple-header>
     </div>
-
