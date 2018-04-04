@@ -6,10 +6,6 @@
 uvalib-footer {
 	margin-top: 30px;
 }
-#footer {
-	margin-top: 1em;
-	padding-bottom: 0;
-}
 </style>
 
 <!-- Adjust footer placement inside of component after page load. -->
@@ -18,10 +14,3 @@ $(document).ready(function(){
   $("#footer").attr("slot", "bottom-bar").wrap("<uvalib-footer></uvalib-footer>");
 });
 </script>
-
-
-
-
-
-
-
