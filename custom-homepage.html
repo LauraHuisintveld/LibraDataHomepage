@@ -52,26 +52,9 @@
         </div> 
 
 </div> 
-																       
-</div>
-
-
-     <!--<div class="row uvaSearch"> -->
-
-<div class="row uvaSearch">
-    <div class="col-md-6 searchContainer text-center">
-
-<div>
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search UVa Dataverse for ALL datasets..." />
-      <span class="input-group-btn">
-        <button class="btn btn-primary" type="button">  <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</button>
-      </span>
-    </div>   <!-- class="input-group" -->
-
-        </div> 
-
-</div> 
+<!--	    <div class="col-md-4 searchContainer">
+		 <a href="/dataverse/libradata?q=&types=datasets&sort=dateSort&order=desc&page=1" class="btn btn-primary" role="button">Browse LibraData Datasets</a>
+	 </div>  -->
 																       
 </div>
 
@@ -117,26 +100,6 @@
 		var searchStr = $(".dataverseSearch input[type=text]").val();
 		window.location = '/dataverse/libradata?q='+searchStr;
 	});
-
-	// Detect if enter key pressed in search box to trigger submission.
-	$(“.uvaSearch input[type=text]").on("keyup", function(e) {
-		if (e.keyCode == 13) {
-			$(“.uvaSearch button").trigger("click");
-		}
-	});
-	// For accessibility make sure the button responds to enter and spacebar
-	$(“.uvaSearch button").on("keyup", function(e) {
-		if ((e.keyCode == 13) || (e.keyCode ==32)) {
-			$(“.uvaSearch button").trigger("click");
-		}
-	});
-	// Configure search button to trigger submission with input box text value.
-	$(“.uvaSearch button").click(function() {
-		var searchStr = $(“.uvaSearch input[type=text]").val();
-		window.location = '/dataverse/uva?q='+searchStr;
-	});
-
-
 	// For accessibility make sure the Add Data button responds to enter and spacebar
 	$(".customWell button").on("keyup", function(e) {
 		if ((e.keyCode == 13) || (e.keyCode ==32)) {
