@@ -24,3 +24,9 @@
                 border-top: 1px solid #DADADA;
                 border-bottom: 1px solid #DADADA;
             }
+
+            .uvaSearch .searchContainer {
+                margin: 15px 0;
+                padding: 30px;
+                border-bottom: 1px solid #DADADA;
+            }
