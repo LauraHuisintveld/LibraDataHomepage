@@ -35,25 +35,7 @@
                </ul>
            </div> 
         </div>
-     <!--<div class="row dataverseSearch"> -->
 
-<div class="row dataverseSearch">
-    <h3>Search Datasets</h3>
-    <div class="col-md-6 searchContainer text-center">
-
-<div>
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search LibraData for open datasets..." />
-      <span class="input-group-btn">
-        <button class="btn btn-primary" type="button">  <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</button>
-      </span>
-    </div>   <!-- class="input-group" -->
-
-        </div> 
-
-</div> 
-																       
-</div>
 
 
      <!-- <div class="row uvaSearch"> -->
@@ -63,7 +45,7 @@
 
 <div>
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search UVa Dataverse for ALL datasets..." />
+      <input type="text" class="form-control" placeholder="Search ALL datasets..." />
       <span class="input-group-btn">
         <button class="btn btn-primary" type="button">  <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</button>
       </span>
@@ -85,7 +67,7 @@
                     <a href="/dataverse/uva-law" class="btn btn-block btn-lg btn-default" role="button">University of Virginia Law School</a>
                     <a href="/dataverse/astronomy" class="btn btn-block btn-lg btn-default" role="button">Department of Astronomy</a>
                     <a href="/dataverse/culturalheritage" class="btn btn-block btn-lg btn-default" role="button">Cultural Heritage</a>
-                    <a href="/dataverse/libradata?q=&types=datasets&sort=dateSort&order=desc&page=1" class="btn btn-block btn-lg btn-default" role="button">Browse all LibraData - Open Datasets</a>
+                    <a href="/dataverse/libradata?q=&types=datasets&sort=dateSort&order=desc&page=1" class="btn btn-block btn-lg btn-default" role="button">Browse all LibraData Datasets</a>
                 </div>
 			     	
                 <div class="col-md-6">
@@ -98,24 +80,6 @@
         </div>
 <script> 
 	$(document).ready(function() {
-	// Detect if enter key pressed in search box to trigger submission.
-	$(".dataverseSearch input[type=text]").on("keyup", function(e) {
-		if (e.keyCode == 13) {
-			$(".dataverseSearch button").trigger("click");
-		}
-	});
-	// For accessibility make sure the button responds to enter and spacebar
-	$(".dataverseSearch button").on("keyup", function(e) {
-		if ((e.keyCode == 13) || (e.keyCode ==32)) {
-			$(".dataverseSearch button").trigger("click");
-		}
-	});
-	// Configure search button to trigger submission with input box text value.
-	$(".dataverseSearch button").click(function() {
-		var searchStr = $(".dataverseSearch input[type=text]").val();
-		window.location = '/dataverse/libradata?q='+searchStr;
-	});
-
 	// Detect if enter key pressed in search box to trigger submission.
 	$(".uvaSearch input[type=text]").on("keyup", function(e) {
 		if (e.keyCode == 13) {
