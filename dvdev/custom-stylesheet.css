@@ -1,0 +1,36 @@
+            .rowMargin {
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+            .leadContent .customWell {
+                background-image: none;
+                background-color: #fbfbfb;
+            }
+            .leadContent h2 {
+                color: #eb5f0c;
+                margin-top: 0px;
+            }
+            .leadContent a {
+                text-decoration: underline;
+            }
+
+            .leadContent .collapsedData {
+                padding-left: 18px;
+            }
+
+            .uvaSearch .searchContainer {
+                margin: 15px 0;
+                padding: 30px;
+                border-top: 1px solid #DADADA;
+                border-bottom: 1px solid #DADADA;
+            }
+
+            .nouvaSearch .searchContainer {
+                margin: -50px 0;
+                padding: 30px;
+                border-bottom: 1px solid #DADADA;
+            }
+            
+            .featuredDataverses {
+                margin: 50px 0;
+            }
