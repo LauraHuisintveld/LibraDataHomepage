@@ -14,6 +14,7 @@ Files used for UVa homepage configuration are included in this github repo.
 
 One has to log on to the local dataverse server and put the configuration files in these folders:
 html pages (homepage, footer, header, CSS stylesheet) are located here: /var/www/dataverse/branding
+
 Custom logo goes here: /usr/local/glassfish4/glassfish/domains/domain1/docroot/logos/navbar
 
 ## More Information
