@@ -1,3 +1,11 @@
+            table[id$='resultsTable'] td > div.dataverseResult {
+               border-width: medium;
+            }
+
+            table[id$='resultsTable'] td > div.datasetResult {
+               border-width: medium;
+            }
+
             .rowMargin {
                 margin-top: 15px;
                 margin-bottom: 15px;
